@@ -44,8 +44,11 @@ const AddComment = (props) => {
     }
   };
   useEffect(() => {
-    setComment(...comment, (elementId = props.asin));
-  }, []);
+    setComment((prevComment) => ({
+      ...prevComment,
+      elementId: props.asin
+    }));
+  }, [props.asins]);
 
   return (
     <div className="my-3">

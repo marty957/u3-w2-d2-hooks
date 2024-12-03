@@ -30,7 +30,8 @@ const CommentArea = (props) => {
         let comments = await response.json();
 
         setcomments(comments);
-        setisLoading(false), setisError(false);
+        setisLoading(false);
+        setisError(false);
       } else {
         setisLoading(false);
         setisError(true);
@@ -43,7 +44,7 @@ const CommentArea = (props) => {
   };
   useEffect(() => {
     fetchComments();
-  }, [comments]);
+  }, []);
   return (
     <div className="text-center">
       {isLoading && <Loading />}

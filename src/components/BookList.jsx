@@ -37,9 +37,7 @@ const BookList = (props) => {
               ))}
           </Row>
         </Col>
-        <Col md={4}>
-          <CommentArea asin={selectedBook} />
-        </Col>
+        <Col md={4}>{selectedBook && <CommentArea asin={selectedBook} />}</Col>
       </Row>
     </>
   );
