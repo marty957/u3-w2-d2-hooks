@@ -44,7 +44,7 @@ const CommentArea = (props) => {
   };
   useEffect(() => {
     fetchComments();
-  }, []);
+  }, [props.asin]);
   return (
     <div className="text-center">
       {isLoading && <Loading />}
